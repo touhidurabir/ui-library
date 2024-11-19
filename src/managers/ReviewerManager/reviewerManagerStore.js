@@ -33,7 +33,7 @@ export const useReviewerManagerStore = defineComponentStore(
 		/**
 		 * Config
 		 */
-		const {getCellStatusItems, getColumns} = useReviewerManagerConfig();
+		const {getCellStatusItems, getColumns} = useReviewerManagerConfig(props.recommendations);
 
 		const columns = computed(() =>
 			getColumns({
