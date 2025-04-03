@@ -967,6 +967,27 @@ export const PublicationConfig = {
 			return [
 				{
 					component: 'WorkflowPublicationEditor',
+					// component: 'SciFlowEditor',
+					props: {
+						canEdit: permissions.canEditPublication,
+						submission,
+						publication: selectedPublication,
+					},
+				},
+			];
+		},
+	},
+	nativeeditors: {
+		getPrimaryItems: ({
+			submission,
+			selectedPublication,
+			pageInitConfig,
+			permissions,
+		}) => {
+			return [
+				{
+					// component: 'WorkflowPublicationEditor',
+					component: 'SciFlowEditor',
 					props: {
 						canEdit: permissions.canEditPublication,
 						submission,

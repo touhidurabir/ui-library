@@ -253,7 +253,14 @@ export function useWorkflowNavigationConfigOJS(pageInitConfig) {
 		items.push(
 			getPublicationItem({
 				name: 'editors',
-				label: 'Fulltext Editor',
+				label: 'SciFlow Editor (demo-component)',
+			}),
+		);
+
+		items.push(
+			getPublicationItem({
+				name: 'nativeeditors',
+				label: 'SciFlow Editor (native)',
 			}),
 		);
 

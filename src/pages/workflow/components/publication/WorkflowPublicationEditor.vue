@@ -1,9 +1,9 @@
 <template>
 	<div class="fulltext-editor">
 		<sfo-editor v-if="isEditorReady">
-			<h1 data-type="abstract">Abstract</h1>
-			<p>Power your CMS with a modern academic editing experience.</p>
-		</sfo-editor>
+            <h1 data-type="abstract">Abstract</h1>
+            <p>Power your CMS with a modern academic editing experience.</p>
+        </sfo-editor>
 	</div>
 </template>
 
@@ -29,7 +29,7 @@ async function loadEditorScripts() {
 			const editor = document.querySelector('sfo-editor');
 			if (editor) {
 				editor.addEventListener('document', (event) => {
-					const doc = event.detail?.toJSON();
+			const doc = event.detail?.toJSON();
 					console.log('[Editor Component] Document changed', {doc});
 				});
 			}
@@ -42,7 +42,7 @@ async function loadEditorScripts() {
 
 onMounted(() => {
 	loadEditorScripts();
-});
+	});
 </script>
 
 <style>
