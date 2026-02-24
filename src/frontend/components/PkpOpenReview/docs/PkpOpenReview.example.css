@@ -308,7 +308,7 @@
    ============================================ */
 
 .PkpOpenReviewItemByRound__header {
-	grid-template-columns: auto auto 1fr auto;
+	grid-template-columns: auto auto auto 1fr auto;
 }
 
 .PkpOpenReviewItemByRound__reviewer {
@@ -327,8 +327,9 @@
 	white-space: nowrap;
 }
 
-.PkpOpenReviewItemByRound__affiliation::before {
-	content: '— ';
+.PkpOpenReviewItemByRound__affiliationSeparator {
+	font-size: 0.875rem;
+	color: #666;
 }
 
 /* Medium screens — affiliation to full-width row 2 */
@@ -338,12 +339,12 @@
 		align-items: start;
 	}
 
-	.PkpOpenReviewItemByRound__affiliation {
-		grid-column: 1 / -1;
+	.PkpOpenReviewItemByRound__affiliationSeparator {
+		display: none;
 	}
 
-	.PkpOpenReviewItemByRound__affiliation::before {
-		content: none;
+	.PkpOpenReviewItemByRound__affiliation {
+		grid-column: 1 / -1;
 	}
 
 	.PkpOpenReviewItemByRound__date {
@@ -356,6 +357,10 @@
 @media (max-width: 479px) {
 	.PkpOpenReviewItemByRound__header {
 		grid-template-columns: 1fr auto;
+	}
+
+	.PkpOpenReviewItemByRound__affiliationSeparator {
+		display: none;
 	}
 
 	.PkpOpenReviewItemByRound__status {
