@@ -1,5 +1,5 @@
 <template>
-	<AccordionItem :class="cn('root')" :value="String(value)">
+	<AccordionItem :class="cn('root')" :value="value">
 		<slot />
 	</AccordionItem>
 </template>
